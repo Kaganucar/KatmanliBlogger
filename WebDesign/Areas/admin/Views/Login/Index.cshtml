@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container" style="margin-top:25px;">
+
+      <div class="col-md-12" style="margin-top:25px;">
+
+          <form action="/admin/Login" method="POST">
+
+              <input type="text" name="Email" class="form-control" placeholder ="Email Gir :" /><br />
+              <input type="password" name="Sifre" class="form-control" placeholder ="Şifre Gir :" /><br />
+
+              <button type="submit" class="btn btn-primary"> Giriş Yap</button>
+
+          </form>
+            @if (ViewBag.mesaj != null)
+            {
+                    <div class="alert alert-danger">@ViewBag.mesaj</div>
+            }
+      </div>
+    </div>
+</body>
+</html>

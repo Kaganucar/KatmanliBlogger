@@ -1,0 +1,27 @@
+﻿
+<a href="/admin/Bloglar/Ekle" class="btn btn-primary">Yeni Ekle</a>
+
+<table class="table table-bordered" style="margin-top:15px;">
+
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>Blog Adı</td>
+            <td>İşlemler</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.BlogName</td>
+                <td>
+                    <a href="/admin/Blog/Guncelle/@item.id" class="btn btn-primary">Güncelle</a>
+                    <a href="/admin/Blog/sil/@item.id" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

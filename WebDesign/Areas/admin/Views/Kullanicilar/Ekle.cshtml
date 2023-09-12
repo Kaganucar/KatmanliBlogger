@@ -1,0 +1,21 @@
+﻿<a href="/admin/Kullanicilar" class="btn btn-primary">Geri Git</a>
+
+<!--Controller tarafına inputlara girilen verileri göndermemizi sağlayan bir mekanizmadır.-->
+<form action="/Admin/Kullanicilar/Ekle" method="post">
+    <br />
+    <input type="text" name="Email" placeholder="Email" class="form-control" /><br /><br />
+    <input type="text" name="Passwords" placeholder="Passwords" class="form-control" /><br />
+    
+    <select name="Roles" class="form-control">
+        <option value="Admin">Admin</option>
+        <option value="Uye">Uye</option>
+    </select>
+    <br />
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+</form>
+
+@if (ViewBag.message != null)
+{
+    <div class="alert alert-info">@ViewBag.message</div>
+}
